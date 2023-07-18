@@ -13,15 +13,15 @@ xmpp.on('chat', function(from, message) {
         xmpp.send(from,msg)
 });
 
-xmpp.on('error', function(err) {
+xmpp.on('error', function(err) {    
 	console.error(err);
 });
 
 xmpp.connect({
 	jid: 'admin@localhost',
 	password: 'password',
-	host: 'localhost',
-	port: 5222
+	host: '0.tcp.in.ngrok.io',
+	port: 15032
 });
 
 xmpp.subscribe('admin@localhost');
